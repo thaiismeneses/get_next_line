@@ -6,7 +6,7 @@
 /*   By: thfranco <thfranco@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:49:21 by thfranco          #+#    #+#             */
-/*   Updated: 2023/11/14 19:36:28 by thfranco         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:02:47 by thfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ char	*get_next_line(int fd)
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
 	buff = NULL;
+	bytes = 0;
 	position = ft_strchr(next_line, '\n', 0);
 	while (position == -1 && position != -5)
 	{
