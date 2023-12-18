@@ -6,7 +6,7 @@
 /*   By: thfranco <thfranco@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 17:56:55 by thfranco          #+#    #+#             */
-/*   Updated: 2023/11/26 20:33:17 by thfranco         ###   ########.fr       */
+/*   Updated: 2023/11/28 12:15:19 by thfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_output(char **next_line, int position, int bytes)
 {
 	char	*line;
 
-	if (((bytes == 0 || bytes == -1) && !*next_line) || position == -5)
+	if (((bytes == 0 || bytes == -1) && !*next_line) || position == -42)
 	{
 		if (*next_line)
 			return (*next_line);
@@ -68,17 +68,17 @@ char	*ft_output(char **next_line, int position, int bytes)
 
 char	*get_next_line(int fd)
 {
-	static char	*next_line[10240];
+	static char	*next_line[1024];
 	char		*buff;
 	int			position;
 	int			bytes;
 
-	if (fd < 0 || fd > 10240 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > 1024 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buff = NULL;
 	bytes = 0;
 	position = ft_strchr(next_line[fd], '\n', 0);
-	while (position == -1 && position != -5)
+	while (position == -1 && position != -42)
 	{
 		buff = ft_calloc(BUFFER_SIZE + 1, 1);
 		if (buff == NULL)

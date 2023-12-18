@@ -6,7 +6,7 @@
 /*   By: thfranco <thfranco@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:49:51 by thfranco          #+#    #+#             */
-/*   Updated: 2023/11/14 18:48:50 by thfranco         ###   ########.fr       */
+/*   Updated: 2023/11/28 12:11:41 by thfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strchr(char *s, int c, int flag)
 
 	i = 0;
 	if (flag == 1 && !s)
-		return (-5);
+		return (-42);
 	while (s && s[i])
 	{
 		if (s[i] == c)
